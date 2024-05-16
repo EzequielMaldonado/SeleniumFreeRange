@@ -83,7 +83,7 @@ public class FreeRangeSteps {
     }
 
     // Esta es una funcion nueva para probar el uso de gitHub
-    public void thisIsATest() {
+    public void estoEsUnaFuncionDePrueba() {
         System.out.println("This is a test");
     }
     // Este es otro cambio para seguir probando
