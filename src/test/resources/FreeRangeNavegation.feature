@@ -15,16 +15,11 @@ Feature: Navigation bar
             | Mentorías            |
             | Udemy                |
 
-    # Scenario: Courses are presented correctly to potential customers
-    #     Given I navigate to www.freerangetesters.com
-    #     When I go to Cursos using the navigation bar
-    #     And Select Introducción al Testing
+    Scenario: Courses are presented correctly to potential customers
+        Given I navigate to www.freerangetesters.com
+        When I go to Cursos using the navigation bar
+        And Select Introducción al Testing
     
-    #Testing the git functions
-    #Testing the git functions
-    #Testing the git functions
-    #Testing the git functions
-
     @Plans
     Scenario: Users can select a plan when signing up
         Given I navigate to www.freerangetesters.com

@@ -28,7 +28,4 @@ public class PaginaPrincipal extends BasePage {
         clickElement(elegirUnPlanButton);
     }
 
-    // Testing the git functions
-    // Testing the git functions
-
 }

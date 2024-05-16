@@ -23,6 +23,4 @@ public class TestRunner {
         public static void cleanDriver() {
                 BasePage.closeBrowser();
         }
-
-        // Testing the git functions
 }

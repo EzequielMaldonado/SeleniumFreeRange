@@ -82,10 +82,4 @@ public class FreeRangeSteps {
         soft.assertAll();
     }
 
-    // Esta es una funcion nueva para probar el uso de gitHub
-    public void estoEsUnaFuncionDePrueba() {
-        System.out.println("This is a test");
-    }
-    // Este es otro cambio para seguir probando
-
 }
