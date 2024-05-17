@@ -27,22 +27,23 @@ public class FreeRangeSteps {
 
     @When("I go to {word} using the navigation bar")
     public void navigationBarUse(String section) {
-        // landingPage.clickOnSectionNavigationBar(section);
-        landingPage.clickOnCursosOption(section);
+        landingPage.clickOnSectionNavigationBar(section);
+        //landingPage.clickOnCursosOption(section);
     }
 
-    @When("I select Elegir Plan")
+    @When("(I|The user|The client) select Elegir Plan")
     public void selectElegirUnPlan() {
         landingPage.clickOnElegirUnPlanButton();
     }
 
-    @And("Select Introducción al Testing")
+    @Then("Select Introducción al Testing")
     public void navigateToIntro() {
         cursosPage.clickFundamentosTestingLinkV2();
         fundamentosPage.clickIntroduccionTestingLink();
+        throw new io.cucumber.java.PendingException();
     }
 
-    @Then("I can validate the options in the checkout page")
+    @Then("(I|The user|The client) can validate the options in the checkout page")
     public void checkOutValidatesPlans() {
         List<String> lista = registro.returnPlanDropdownValues();
         List<String> listaEsperada = Arrays.asList("Academia 1699  mes  12 productos",

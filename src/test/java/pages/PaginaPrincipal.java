@@ -2,7 +2,7 @@ package pages;
 
 public class PaginaPrincipal extends BasePage {
 
-    private String sectionLink = "//a[normalize-space()='Cursos' and @href]";
+    private String sectionLink = "//a[normalize-space()='%s' and @href]";
     private String elegirUnPlanButton = "//a[normalize-space()='Elegir Plan' and @href]";
 
     public PaginaPrincipal() {
