@@ -20,7 +20,7 @@ Feature: Navigation
 
     Scenario: Courses are presented correctly to potential customers
         When I go to Cursos using the navigation bar
-        Then Select Introducción al Testing
+        And I select Introducción al Testing
 
     @Plans
     Scenario: Users can select a plan when signing up

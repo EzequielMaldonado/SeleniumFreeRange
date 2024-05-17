@@ -28,22 +28,22 @@ public class FreeRangeSteps {
     @When("I go to {word} using the navigation bar")
     public void navigationBarUse(String section) {
         landingPage.clickOnSectionNavigationBar(section);
-        //landingPage.clickOnCursosOption(section);
+        // landingPage.clickOnCursosOption(section);
     }
 
-    @When("(I|The user|The client) select Elegir Plan")
+    @When("^(?:I|The user|The client) selects? Elegir Plan$")
     public void selectElegirUnPlan() {
         landingPage.clickOnElegirUnPlanButton();
     }
 
-    @Then("Select Introducción al Testing")
+    @And("^(?:I|The user|The client) selects? Introducción al Testing$")
     public void navigateToIntro() {
         cursosPage.clickFundamentosTestingLinkV2();
         fundamentosPage.clickIntroduccionTestingLink();
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("(I|The user|The client) can validate the options in the checkout page")
+    @Then("^(?:I|The user|The client) can validate the options in the checkout page$")
     public void checkOutValidatesPlans() {
         List<String> lista = registro.returnPlanDropdownValues();
         List<String> listaEsperada = Arrays.asList("Academia 1699  mes  12 productos",
@@ -53,34 +53,34 @@ public class FreeRangeSteps {
 
     }
 
-    public void SomeExamplesOfAssertions() {
-        String palabraEsperada = "Pepe";
-        String palabraEncontrada = "Papa";
+    // public void SomeExamplesOfAssertions() {
+    // String palabraEsperada = "Pepe";
+    // String palabraEncontrada = "Papa";
 
-        Integer numero1 = 1;
-        Integer numero2 = 2;
+    // Integer numero1 = 1;
+    // Integer numero2 = 2;
 
-        Assert.assertEquals(numero1, numero2);
+    // Assert.assertEquals(numero1, numero2);
 
-        // Verificar que dos valores no son iguales
-        Assert.assertNotEquals(palabraEsperada, palabraEncontrada);
+    // // Verificar que dos valores no son iguales
+    // Assert.assertNotEquals(palabraEsperada, palabraEncontrada);
 
-        // Verificar que dos valores son iguales
-        Assert.assertEquals(palabraEsperada, palabraEncontrada);
+    // // Verificar que dos valores son iguales
+    // Assert.assertEquals(palabraEsperada, palabraEncontrada);
 
-        // Verificar que una condicion es verdadera
-        Assert.assertTrue(palabraEncontrada.contains(palabraEsperada));
+    // // Verificar que una condicion es verdadera
+    // Assert.assertTrue(palabraEncontrada.contains(palabraEsperada));
 
-        // Verificar que una condicion es false
-        Assert.assertFalse(palabraEncontrada.contains(palabraEsperada));
+    // // Verificar que una condicion es false
+    // Assert.assertFalse(palabraEncontrada.contains(palabraEsperada));
 
-        // Soft Assertions: No detienen la ejecucion al fallar. Ideal para verificar
-        // muchas cosas pequeñas a la vez
-        soft.assertEquals(palabraEsperada, palabraEncontrada);
-        soft.assertTrue(palabraEncontrada.contains(palabraEsperada));
-        soft.assertNotEquals(palabraEncontrada, palabraEsperada);
+    // // Soft Assertions: No detienen la ejecucion al fallar. Ideal para verificar
+    // // muchas cosas pequeñas a la vez
+    // soft.assertEquals(palabraEsperada, palabraEncontrada);
+    // soft.assertTrue(palabraEncontrada.contains(palabraEsperada));
+    // soft.assertNotEquals(palabraEncontrada, palabraEsperada);
 
-        soft.assertAll();
-    }
+    // soft.assertAll();
+    // }
 
 }
