@@ -11,7 +11,7 @@ import pages.BasePage;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources", // Directorio de nuestros archivos .feature src\test\resources\FreeRangeNavegation.feature 
                 glue = "steps", // Paquete donde tenemos nuestras clases definiendo los steps
-                plugin = { "pretty", "html:target/cucumber-reports" }, tags = "@Navigation")
+                plugin = { "pretty", "html:target/cucumber-reports" }, monochrome = true, tags = "@Cart")
                 
 
 
@@ -21,8 +21,8 @@ public class TestRunner {
                 BasePage.maximizar();
         }
 
-        @AfterClass
-        public static void cleanDriver() {
-                BasePage.closeBrowser();
-        }
+        // @AfterClass
+        // public static void cleanDriver() {
+        //         BasePage.closeBrowser();
+        // }
 }

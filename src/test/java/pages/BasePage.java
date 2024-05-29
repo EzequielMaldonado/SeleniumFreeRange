@@ -59,6 +59,10 @@ public class BasePage {
         driver.get(url);
     }
 
+    public static void goToLinkText(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
     public static void closeBrowser() {
         driver.quit();
     }
@@ -114,6 +118,10 @@ public class BasePage {
             //values.add(option.getText());
         }
         return values;
+    }
+
+    public String textFromElement(String locator){
+        return Find(locator).getText();
     }
 
 
