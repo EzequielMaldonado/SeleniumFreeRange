@@ -16,13 +16,14 @@ public class MercadoLibreSearchSteps {
 
     @And("^searches for (.+)$")
     public void enterSearchCriteria(String criteria){
+        meli.clickAcceptCookiesButton();
         meli.enterSearchCriteria(criteria);
-        meli.navigateToMeli();
+        meli.clickSearch();
     }
 
-    @And("^navigates to the page number (.+)$")
-    public void navigateToSecondPage(String pageNumber){
-        meli.goToPage(pageNumber);
+    @And("^navigates to the second page$")
+    public void navigateToSecondPage(){
+        meli.navigateToSecondPage();
     }
 
     @And("^selects the third item$")
